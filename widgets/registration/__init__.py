@@ -1,0 +1,1 @@
+from .RegistrationDialog import RegistrationDialog
