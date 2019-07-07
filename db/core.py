@@ -1,4 +1,3 @@
-from bson import ObjectId
 from pymongo import MongoClient
 
 # import dnspython
@@ -55,10 +54,6 @@ class DB_Base:
 
     def get_all_goods(self, filter={}):
         return self.collection.find(filter, {key:0 for key in filtred_keys})
-
-    @property
-    def col(self):
-        return self.collection
 
 
 class Customers(DB_Base):
@@ -174,4 +169,4 @@ if __name__ == '__main__':
     # supliers = Suppliers()
     # print(list(supliers.get(pipeline)))
 
-    supliers.col.update_many({}, { '$rename': {'коты': 'молоко'} })
+    supliers.col.update_one({}, {'$set': {'Координаты': 'молоко'}})

@@ -8,7 +8,7 @@ class RegistrationDialog(QtWidgets.QDialog):
     def __init__(self, parent=None):
         super(RegistrationDialog, self).__init__(parent, Qt.WindowCloseButtonHint)
         # Загрузка виджета
-        self.ui = uic.loadUi('registration_dialog.ui', self)
+        self.ui = uic.loadUi('./widgets/registration/registration_dialog.ui', self)
 
         # Тип пользователя: 0 - поставщик, 1 - перевозчик, 2 - заказчик
         self.userType = 0
